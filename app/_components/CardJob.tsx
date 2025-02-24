@@ -16,7 +16,13 @@ type JobProps = {
   salary_max: number;
 };
 
-export default function CardJob({ item }: { item: JobProps }) {
+export default function CardJob({
+  item,
+  label,
+}: {
+  item: JobProps;
+  label: string;
+}) {
   const { formatRupiah } = useRupiahFormat();
   return (
     <div className="bg-white shadow-sm rounded-lg border relative overflow-hidden hover:shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-2">
@@ -27,7 +33,7 @@ export default function CardJob({ item }: { item: JobProps }) {
       />
 
       <Badge className="absolute top-2 left-2 bg-transparent text-orange-400 px-3 py-1 rounded-full cursor-pointer ">
-        🔥TOP
+        {label}
       </Badge>
 
       <div className="p-4">

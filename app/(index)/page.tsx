@@ -7,7 +7,7 @@ import CardJob from "../_components/CardJob";
 
 export default async function Home() {
   const jobs = await getJobsFavorite();
-  console.log(jobs);
+  // console.log(jobs);
   if (jobs.length === 0) {
     return (
       <div className="text-2xl font-semibold">Jobs is not available..</div>
@@ -27,7 +27,7 @@ export default async function Home() {
             Why choose Career<span className="text-orange-400">Hub</span> for
             your job hunt?
           </h1>
-          <div className="grid sm:grid-cols-2   lg:grid-cols-4 gap-4 justify-items-center">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
             {features.map((feature) => {
               return (
                 <div
@@ -58,7 +58,7 @@ export default async function Home() {
           </h1>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-8">
             {jobs.map((item) => {
-              return <CardJob key={item.id} item={item} />;
+              return <CardJob key={item.id} item={item} label="🔥TOP" />;
             })}
           </div>
         </div>
