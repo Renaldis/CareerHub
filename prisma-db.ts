@@ -92,7 +92,7 @@ const seedJobs = async () => {
 
 seedJobs();
 
-//  CRUD
+//  CRUD JOBS
 // READ
 export async function getJobs() {
   return prisma.job.findMany();
@@ -106,3 +106,5 @@ export async function getJobsFavorite() {
     },
   });
 }
+
+// CRUD ADMIN
